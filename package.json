@@ -2,7 +2,7 @@
   "name": "bidpro",
   "version": "1.0.0",
   "description": "BidPro Final assignment.",
-  "homepage": "https://jshilmover.github.io/",
+  "homepage": "https://jshilmover.github.io/CIS-117-BidPro/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
