@@ -33,8 +33,9 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ["babel-loader", "eslint-loader"],
+        include: path.resolve(__dirname, "src"),
+        exclude: /(node_modules|bower_components|build)/,
+        use: ["babel-loader"],
       },
       {
         test: /(\.css)$/,

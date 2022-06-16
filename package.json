@@ -1,9 +1,14 @@
 {
   "name": "bidpro",
-  "description": "please i am begging you to work",
+  "version": "1.0.0",
+  "description": "BidPro Final assignment.",
+  "homepage": "https://jshilmover.github.io/",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "webpack-dev-server --config webpack.config.dev.js --port 3000",
-    "storybook": "start-storybook -p 6333"
+    "storybook": "start-storybook -p 6333",
+    "build": "react-scripts build"
   },
   "dependencies": {
     "@datorama/akita": "^7.1.1",
@@ -44,12 +49,14 @@
     "cssnano": "4.1.10",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.11.2",
-    "eslint": "5.15.2",
+    "eslint": "^5.0.0",
+    "eslint-config-react-app": "^7.0.1",
     "eslint-loader": "2.1.2",
     "eslint-plugin-import": "2.16.0",
     "eslint-plugin-react": "7.12.4",
     "fetch-mock": "7.3.1",
     "file-loader": "^6.2.0",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "5.3.2",
     "http-server": "0.11.1",
     "jest": "24.5.0",
@@ -58,6 +65,7 @@
     "node-fetch": "^2.3.0",
     "npm-run-all": "4.1.5",
     "postcss-loader": "3.0.0",
+    "react-scripts": "^5.0.1",
     "react-test-renderer": "16.8.4",
     "react-testing-library": "6.0.0",
     "redux-immutable-state-invariant": "2.1.0",
@@ -80,7 +88,6 @@
   "eslintConfig": {
     "extends": [
       "eslint:recommended",
-      "plugin:react/recommended",
       "plugin:import/errors",
       "plugin:import/warnings"
     ],
@@ -124,5 +131,17 @@
       }
     },
     "root": true
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
