@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 render(
   <Provider store={store}>
-    <HashRouter base="/">
+    <HashRouter base="CIS-117-BidPro/">
       <App />
     </HashRouter>
   </Provider>,
