@@ -2,13 +2,13 @@
   "name": "bidpro",
   "version": "1.0.0",
   "description": "BidPro Final assignment.",
-  "homepage": "https://jshilmover.github.io/CIS-117-BidPro/",
+  "homepage": ".",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "webpack-dev-server --config webpack.config.dev.js --port 3000",
     "storybook": "start-storybook -p 6333",
-    "build": "react-scripts build"
+    "build": "webpack"
   },
   "dependencies": {
     "@datorama/akita": "^7.1.1",
@@ -34,7 +34,9 @@
     "reselect": "4.0.0"
   },
   "devDependencies": {
-    "@babel/core": "7.3.4",
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-controls": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
@@ -43,8 +45,7 @@
     "@storybook/manager-webpack5": "^6.4.22",
     "@storybook/react": "^6.4.22",
     "babel-eslint": "10.0.1",
-    "babel-loader": "8.0.5",
-    "babel-preset-react-app": "7.0.2",
+    "babel-loader": "^8.2.5",
     "css-loader": "2.1.1",
     "cssnano": "4.1.10",
     "enzyme": "3.9.0",
@@ -82,7 +83,8 @@
   },
   "babel": {
     "presets": [
-      "babel-preset-react-app"
+      "@babel/preset-env",
+      "@babel/preset-react"
     ]
   },
   "eslintConfig": {

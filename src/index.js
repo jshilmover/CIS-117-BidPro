@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 
 import store from "./redux/store";
 import { Provider } from "react-redux";
@@ -10,10 +10,14 @@ import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 render(
-  <Provider store={store}>
-    <Router>
-      <App />
-    </Router>
-  </Provider>,
+  React.createElement(
+    Provider,
+    { store: store },
+    React.createElement(
+      Router,
+      { base: "CIS-117-BidPro/" },
+      React.createElement(App, null)
+    )
+  ),
   document.getElementById("app")
 );

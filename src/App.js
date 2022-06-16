@@ -16,24 +16,45 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import HomePage from "./pages/home/HomePage";
-import AABidTypesPage from "./pages/american-airlines/AABidTypesPage";
-import AAPilotsPage from "./pages/american-airlines/AAPilotsPage";
-import ASPilotsPage from "./pages/alaska-airlines/ASPilotsPage";
-import FAPilotsPage from "./pages/frontier-airlines/FAPilotsPage";
-import UPPilotsPage from "./pages/ups/UPPilotsPage";
+import AABidTypesPage from "./pages/american-airlines/AABidTypesPage.jsx";
+import AAPilotsPage from "./pages/american-airlines/AAPilotsPage.jsx";
+import ASPilotsPage from "./pages/alaska-airlines/ASPilotsPage.jsx";
+import FAPilotsPage from "./pages/frontier-airlines/FAPilotsPage.jsx";
+import UPPilotsPage from "./pages/ups/UPPilotsPage.jsx";
 
 function App() {
-  return (
-    <div className="container">
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/american-airlines/bidtypes" component={AABidTypesPage} />
-        <Route path="/american-airlines/pilots" component={AAPilotsPage} />
-        <Route path="/alaska-airlines/pilots" component={ASPilotsPage} />
-        <Route path="/frontier-airlines/pilots" component={FAPilotsPage} />
-        <Route path="/ups/pilots" component={UPPilotsPage} />
-      </Switch>
-    </div>
+  return React.createElement(
+    "div",
+    { className: "container" },
+    React.createElement(
+      Switch,
+      null,
+      React.createElement(Route, {
+        exact: true,
+        path: "/",
+        component: HomePage,
+      }),
+      React.createElement(Route, {
+        path: "/american-airlines/bidtypes",
+        component: AABidTypesPage,
+      }),
+      React.createElement(Route, {
+        path: "/american-airlines/pilots",
+        component: AAPilotsPage,
+      }),
+      React.createElement(Route, {
+        path: "/alaska-airlines/pilots",
+        component: ASPilotsPage,
+      }),
+      React.createElement(Route, {
+        path: "/frontier-airlines/pilots",
+        component: FAPilotsPage,
+      }),
+      React.createElement(Route, {
+        path: "/ups/pilots",
+        component: UPPilotsPage,
+      })
+    )
   );
 }
 
